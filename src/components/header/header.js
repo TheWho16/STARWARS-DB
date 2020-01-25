@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import './header.css';
+import "./header.css";
 
-const Header = ({onServiceChange}) => {
-  
+const Header = ({ onServiceChange }) => {
   return (
     <div className="header d-flex">
       <h3>
-        <a href="#/">
-          StarDB
-        </a>
+        <a href="#/">StarDB</a>
       </h3>
       <ul className="d-flex">
-        <li>
-          <a href="#/people">People</a>
-        </li>
-        <li>
-          <a href="#/planets">Planets</a>
-        </li>
-        <li>
-          <a href="#/starships">Starships</a>
-        </li>
+        <NavLink to="/people">
+          <li>People</li>
+        </NavLink>
+ 
+        <NavLink to="/planets">
+          <li>Planets</li>
+        </NavLink>
+
+        <NavLink to="/starships">
+          <li>Starships</li>
+        </NavLink>
       </ul>
-      <button className='btn btn-primary btn-sm' onClick={onServiceChange}>
+      <button className="btn btn-primary btn-sm" onClick={onServiceChange}>
         Change API
       </button>
     </div>

@@ -3,7 +3,7 @@ import { SwapiServiceConsumer } from "../swapi-servise-context";
 
 const withSwapiService = (mapMethodsToProps)=>(Wrapped) => {
 
-    return (props) => {
+    return ( props) => {
       return (
         <SwapiServiceConsumer>
           {
@@ -18,6 +18,6 @@ const withSwapiService = (mapMethodsToProps)=>(Wrapped) => {
         </SwapiServiceConsumer>
       );
     }
-  };
+  };  
   
   export default withSwapiService;
